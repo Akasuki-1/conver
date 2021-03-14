@@ -477,7 +477,7 @@ def start(bot: Bot, update: Update):
     for x in range(EDIT_TIMES):
         msg.edit_text(moon_ani[x%12])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text(ERROR_PIC99)
+    msg.edit_text('got it')
 
 
 @run_async
