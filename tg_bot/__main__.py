@@ -472,7 +472,6 @@ def f(bot: Bot, update: Update):
 
 @run_async
 def start(bot: Bot, update: Update):
-  first_name = update.effective_user.first_name
     msg = update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ) 
     for x in range(EDIT_TIMES):
         msg.edit_text(moon_ani[x%12])
