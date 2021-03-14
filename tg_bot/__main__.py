@@ -72,17 +72,21 @@ ERROR_PIC8 = "https://telegra.ph/file/b3f7639cef8e1ca84824b.jpg"
 #sleep how many times after each edit in 'moonanimation' 
 EDIT_SLEEP = 1
 #edit how many times in 'moonanimation' 
-EDIT_TIMES = 8
+EDIT_TIMES = 12
 
 moon_ani = [
-            "ERROR_PIC1",
-            "ERROR_PIC2",    
-            "ERROR_PIC3",
-            "ERROR_PIC4",
-            "ERROR_PIC5",
-            "ERROR_PIC6",
-            "ERROR_PIC7",
-            "ERROR_PIC8"
+            "Wait man",
+            "sorry 😒",    
+            "starting",
+            "starting.",
+            "starting..",
+            "starting...",
+            "starting....",
+            "starting...",
+            "starting..",
+            "starting",
+            "starting",
+            "done 🤣"
           
  ]
 
@@ -171,7 +175,7 @@ def test(bot: Bot, update: Update):
 
 
 @run_async
-def start(bot: Bot, update: Update, args: List[str]):
+def rulez(bot: Bot, update: Update, args: List[str]):
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
@@ -199,7 +203,7 @@ def start(bot: Bot, update: Update, args: List[str]):
          
 
         update.effective_message.reply_text("Heya, How can I help you? 🙂",reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="❓ Help",url="t.me/{}?start=help".format(bot.username)),InlineKeyboardButton(text=" Mai Repo",url="https://github.com/No-OnE-Kn0wS-Me/Filterbot")]]))
+                                                [[InlineKeyboardButton(text="❓ Help",url="t.me/{}?start=help".format(bot.username))]]))
                                   
 # for test purposes
 def error_callback(bot, update, error):
@@ -467,12 +471,13 @@ def f(bot: Bot, update: Update):
         update.effective_message.reply_video(FREE_FS, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @run_async
-def rulez(bot: Bot, update: Update):
-    msg = update.effective_message.reply_photo(ERROR_PIC1) 
+def start(bot: Bot, update: Update):
+    first_name = update.effective_user.first_name
+    msg = update.effective_message.reply_text(PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ) 
     for x in range(EDIT_TIMES):
-        msg.edit_photo(moon_ani[x%8])
+        msg.edit_text(moon_ani[x%12])
         time.sleep(EDIT_SLEEP)
-    msg.edit_photo(ERROR_PIC99)
+    msg.edit_text(ERROR_PIC99)
 
 
 @run_async
