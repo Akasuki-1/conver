@@ -519,12 +519,12 @@ def ehelpbotton_about_callback(bot: Bot, update: Update):
                 ]
             ),
         )
-    elif query.data == "ehelpbotton":
+    elif query.data == "ehelpbotton_back":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
+                timeout=65,
                 disable_web_page_preview=True,
         )
 
