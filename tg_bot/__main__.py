@@ -494,6 +494,7 @@ def f(bot: Bot, update: Update):
 
 @run_async
 def start(bot: Bot, update: Update):
+    first_name = update.effective_user.first_name
     msg = update.effective_message.reply_text("cool")
     for x in range(EDIT_TIMES):
         msg.edit_text(moon_ani[x%32])
