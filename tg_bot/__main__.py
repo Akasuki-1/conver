@@ -503,7 +503,7 @@ def start(bot: Bot, update: Update):
     
 
 @run_async
-def ehelpbotton_about_callback(update, context):
+def ehelpbotton_about_callback(bot: Bot, update: Update):
     query = update.callback_query
     if query.data == "ehelpbotton_":
         query.message.edit_text(
