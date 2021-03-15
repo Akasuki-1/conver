@@ -70,45 +70,45 @@ ERROR_PIC7 = "https://telegra.ph/file/022c44496b56bce06e96f.jpg"
 ERROR_PIC8 = "https://telegra.ph/file/b3f7639cef8e1ca84824b.jpg"
 
 #sleep how many times after each edit in 'moonanimation' 
-EDIT_SLEEP = .5
+EDIT_SLEEP = .25
 #edit how many times in 'moonanimation' 
 EDIT_TIMES = 32
 
 #please_keep_the_credit
 #@the_noob_hacker
 moon_ani = [
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖",
-            "🌗",
-            "🌘",    
-            "🌑",
-            "🌒",
-            "🌓",
-            "🌔",
-            "🌕",
-            "🌖"
+            "HI bruh",
+            "Starting.",    
+            "Starting..",
+            "Starting...",
+            "Starting..",
+            "Starting.",
+            "Started 🙂",
+            "🔛",
+            "0️⃣",
+            "1️⃣",    
+            "2️⃣",
+            "3️⃣",
+            "4️⃣",
+            "5️⃣",
+            "6️⃣",
+            "7️⃣",
+            "8️⃣",
+            "9️⃣",    
+            "🔟",
+            "🔄",
+            "😮",
+            "😯",
+            "😲",
+            "😱",
+            "🤯",
+            "😢",    
+            "😥",
+            "😓",
+            "😞",
+            "😖",
+            "🤤",
+            "🌞"
  ]
 
 
@@ -494,7 +494,7 @@ def f(bot: Bot, update: Update):
 
 @run_async
 def start(bot: Bot, update: Update):
-    msg = update.effective_message.reply_text(PM_START_TEXT)
+    msg = update.effective_message.reply_text("cool")
     for x in range(EDIT_TIMES):
         msg.edit_text(moon_ani[x%32])
         time.sleep(EDIT_SLEEP)
