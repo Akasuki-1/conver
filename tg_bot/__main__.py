@@ -497,8 +497,9 @@ def start(bot: Bot, update: Update):
         msg.edit_text(moon_ani[x%32])
         time.sleep(EDIT_SLEEP)
     msg.edit_text(PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_USERNAME ),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="Creater",url="https://t.me/the_noobhacker")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+                                                [[InlineKeyboardButton(text="Help", callback_data="ehelpbotton_")],  
+                                                [InlineKeyboardButton(text="⚜️ Add to your group ⚜️",url="http://t.me/AnjiKicchaNewBot?startgroup=true)]
+                                                [InlineKeyboardButton(text="My Owner🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="Creater",url="https://t.me/the_noobhacker")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     
 
 @run_async
