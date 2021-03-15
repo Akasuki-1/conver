@@ -70,7 +70,7 @@ ERROR_PIC7 = "https://telegra.ph/file/022c44496b56bce06e96f.jpg"
 ERROR_PIC8 = "https://telegra.ph/file/b3f7639cef8e1ca84824b.jpg"
 
 #sleep how many times after each edit in 'moonanimation' 
-EDIT_SLEEP = 1
+EDIT_SLEEP = .5
 #edit how many times in 'moonanimation' 
 EDIT_TIMES = 32
 
