@@ -522,11 +522,12 @@ def ehelpbotton_about_callback(bot: Bot, update: Update):
     elif query.data == "ehelpbotton_back":
         query.message.edit_text(
                 PM_START_TEXT,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=65,
-                disable_web_page_preview=True,
-        )
+                reply_markup=InlineKeyboardMarkup(
+                                                [[InlineKeyboardButton(text="Help", callback_data="ehelpbotton_")],  
+                                                [InlineKeyboardButton(text="⚜️ Add to your group ⚜️",url="http://t.me/anjiKicchaNewBot?startgroup=true")],
+                                                [InlineKeyboardButton(text="My Owner🇮🇳",url="https://t.me/Akboy99"),InlineKeyboardButton(text="Creater",url="https://t.me/the_noobhacker")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
+
+        
 
 
 
