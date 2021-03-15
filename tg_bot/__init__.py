@@ -117,6 +117,8 @@ pbot = Client("tg_bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
+telethn = TelegramClient("tg_bot", API_ID, API_HASH)
+
 dispatcher = updater.dispatcher
 
 SUDO_USERS = list(SUDO_USERS)
