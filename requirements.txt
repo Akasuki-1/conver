@@ -27,3 +27,4 @@ asyncio
 pytube
 youtube-search-python
 pyrogram>=1.1.13
+aiohttp>=2.2.5
