@@ -28,3 +28,4 @@ pytube
 youtube-search-python
 pyrogram>=1.1.13
 aiohttp>=2.2.5
+tgCrypto>=1.2.2
