@@ -64,8 +64,8 @@ if ENV:
     START_PHOTTO = os.environ.get("START_PHOTTO", 'https://telegra.ph/file/7703ef03a791f158e28db.jpg')
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
     OWNER_NAME = os.environ.get("OWNER_NAME", None)
-    API_ID = os.environ.get("API_ID", None)
-    API_HASH = os.environ.get("API_HASH", None)
+    API_ID = os.environ.get("API_ID")
+    API_HASH = os.environ.get("API_HASH")
 
 else:
     from tg_bot.config import Development as Config
