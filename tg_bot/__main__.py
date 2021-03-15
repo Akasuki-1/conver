@@ -219,13 +219,13 @@ def rulez(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker(SECRET_IMG)
             update.effective_message.reply_sticker(NO_JOKE, reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help", callback_data="Ehelpbotton_")],  
+                                                [[InlineKeyboardButton(text="Help", callback_data="ehelpbotton_")],  
                                                 [InlineKeyboardButton(text="Creater",url="https://t.me/the_noobhacker")]]),disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
     else:
          
 
         update.effective_message.reply_text("Heya, How can I help you? 🙂",reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="❓ Help", callback_data="Ehelpbotton_")]]))
+                                                [[InlineKeyboardButton(text="❓ Help", callback_data="ehelpbotton_")]]))
 # for test purposes
 def error_callback(bot, update, error):
     try:
@@ -315,7 +315,7 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="Help", callback_data="Ehelpbotton_")]]))
+                                                [[InlineKeyboardButton(text="Help", callback_data="ehelpbotton_")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
@@ -502,9 +502,9 @@ def start(bot: Bot, update: Update):
     
 
 @run_async
-def Ehelpbotton_about_callback(update, context):
+def ehelpbotton_about_callback(update, context):
     query = update.callback_query
-    if query.data == "Ehelpbotton_":
+    if query.data == "ehelpbotton_":
         query.message.edit_text(
             text=""" Hi.. buddy 
                  \nyou just send */help* to the bot .""",
@@ -513,12 +513,12 @@ def Ehelpbotton_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="Ehelpbotton_back")
+                    InlineKeyboardButton(text="Go Back", callback_data="ehelpbotton_back")
                  ]
                 ]
             ),
         )
-    elif query.data == "Ehelpbotton":
+    elif query.data == "ehelpbotton":
         query.message.edit_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
@@ -586,7 +586,7 @@ def main():
     e_handler = CommandHandler("e", e)
     f_handler = CommandHandler("f", f)
     lolan_handler = CommandHandler("rulez",rulez)
-    Ehelpbotton_callback_handler = CallbackQueryHandler(Ehelpbotton_about_callback, pattern=r"Ehelpbotton_")
+    ehelpbotton_callback_handler = CallbackQueryHandler(ehelpbotton_about_callback, pattern=r"ehelpbotton_")
 
 
     ppchi_handler = CommandHandler("ppchi", ppchi)
@@ -595,7 +595,7 @@ def main():
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(help_handler)
-    dispatcher.add_handler(Ehelpbotton_callback_handler)
+    dispatcher.add_handler(ehelpbotton_callback_handler)
     dispatcher.add_handler(settings_handler)
     dispatcher.add_handler(help_callback_handler)
     dispatcher.add_handler(settings_callback_handler)
