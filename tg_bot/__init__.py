@@ -113,7 +113,7 @@ else:
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(861055237)
 
-pbot = Client(""tg_bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
+pbot = Client("tg_bot", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
