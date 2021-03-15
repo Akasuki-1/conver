@@ -72,39 +72,43 @@ ERROR_PIC8 = "https://telegra.ph/file/b3f7639cef8e1ca84824b.jpg"
 #sleep how many times after each edit in 'moonanimation' 
 EDIT_SLEEP = 1
 #edit how many times in 'moonanimation' 
-EDIT_TIMES = 28
+EDIT_TIMES = 32
 
 #please_keep_the_credit
 #@the_noob_hacker
 moon_ani = [
-            "Wait man",
-            "sorry 😒",    
-            "starting",
-            "starting.",
-            "starting..",
-            "starting...",
-            "starting....",
-            "starting...",
-            "starting..",
-            "starting",
-            "starting",
-            "done 🤣",
-            "😭",
-            "😗",
-            "😚",          
-            "😘",
-            "🥰",
-            "😍",
-            "🤩",
-            "🥳",
-            "🤗",
-            "🙃",          
-            "🙂",
-            "🙄",
-            "🤐",
-            "😰",
-            "😱",
-            "🤯"
+            "🌗",
+            "🌘",    
+            "🌑",
+            "🌒",
+            "🌓",
+            "🌔",
+            "🌕",
+            "🌖",
+            "🌗",
+            "🌘",    
+            "🌑",
+            "🌒",
+            "🌓",
+            "🌔",
+            "🌕",
+            "🌖",
+            "🌗",
+            "🌘",    
+            "🌑",
+            "🌒",
+            "🌓",
+            "🌔",
+            "🌕",
+            "🌖",
+            "🌗",
+            "🌘",    
+            "🌑",
+            "🌒",
+            "🌓",
+            "🌔",
+            "🌕",
+            "🌖"
  ]
 
 
@@ -492,7 +496,7 @@ def f(bot: Bot, update: Update):
 def start(bot: Bot, update: Update):
     msg = update.effective_message.reply_text(PM_START_TEXT)
     for x in range(EDIT_TIMES):
-        msg.edit_text(moon_ani[x%28])
+        msg.edit_text(moon_ani[x%32])
         time.sleep(EDIT_SLEEP)
     msg.edit_text("got it")
 
