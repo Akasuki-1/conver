@@ -197,7 +197,7 @@ def test(bot: Bot, update: Update):
 
 
 @run_async
-def rulez(bot: Bot, update: Update, args: List[str]):
+def start(bot: Bot, update: Update, args: List[str]):
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
