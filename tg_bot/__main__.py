@@ -490,7 +490,7 @@ def f(bot: Bot, update: Update):
         update.effective_message.reply_video(FREE_FS, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 @run_async
-def start(bot: Bot, update: Update):
+def rulezt(bot: Bot, update: Update):
     first_name = update.effective_user.first_name
     msg = update.effective_message.reply_text("cool")
     for x in range(EDIT_TIMES):
